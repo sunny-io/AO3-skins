@@ -1,0 +1,42 @@
+/* Site Skin particles for AO3*/
+/* created by: sunny-io*/
+/* What does it do: Stop display gremlins in results list (works in fandom, search results, ...)*/
+ 
+
+/*Restrict height for tag area in results list. Scroll bar appears in the field if there are more tags*/
+
+li.blurb .tags {
+  max-height: 8.5em;
+  overflow-y: auto;
+  background-color: #F0F9FE;
+  padding-left: 4px;
+  padding-top: 2px;
+  padding-bottom: 1px;
+}
+
+/*Restrict height for fandom list area in results list. Scroll bar appears in the field if there are more fandoms*/
+
+li.blurb > div> h5.fandoms {
+  max-height: 4.5em;
+  overflow-y: auto;
+}
+
+/*Restrict height for summary area in results list. Scroll bar appears in the field if summary exceeds height*/
+
+.blurb blockquote.summary {
+  max-height: 20em;
+  overflow-y: auto;
+}
+
+
+/*Never See This Work Again - Ever*/
+/*To extend this, you need to find the ID of the work in question */
+/*Easiest way: 
+/* 1. Right-click the work title in the results list (the link that would open the work) and choose Copy Link in den context menu. */
+/* The long number after https://archiveofourown.org/works/ but before the next slash / is the work ID.*/
+/* 2. Paste ", .blurb#work_" (without the quote marks) between .blurb#work_20963498 and the opening bracket and paste the ID from the link directly after the underline.*/
+
+.blurb#work_20963498 {
+  display: none;
+}
+
